@@ -203,15 +203,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1692311977,
-        "narHash": "sha256-jbWl1KD9kETr+POtRpBPUGvAkaCHi7F54haJtnt7BX8=",
-        "owner": "anduril",
+        "lastModified": 1695070920,
+        "narHash": "sha256-0MaQSjtc0mGZQIsYYJ4uMJj7ylJUX1cZD0ZPK06tnA0=",
+        "owner": "saronic-technologies",
         "repo": "jetpack-nixos",
-        "rev": "48d86a9a17730154670b5216c44b629f7d32672c",
+        "rev": "91ad860645da9393451f6f7473232b876b548e86",
         "type": "github"
       },
       "original": {
-        "owner": "anduril",
+        "owner": "saronic-technologies",
         "repo": "jetpack-nixos",
         "type": "github"
       }
@@ -455,11 +455,11 @@
         "srvos": "srvos"
       },
       "locked": {
-        "lastModified": 1695052697,
-        "narHash": "sha256-zE2d9Dp2zvgDPD07WGbtluuXoH6IVCygx/hpPgr2CRw=",
+        "lastModified": 1695141544,
+        "narHash": "sha256-Xct4FEsUfrzSRpfJwIbibEW9VFO5oXXywi0T4mZlhng=",
         "ref": "refs/heads/main",
-        "rev": "7c0d8a5194641d37073e71a94c2ce8b7d24ea256",
-        "revCount": 345,
+        "rev": "64ea35178831b31713758e0a3136519ecc33ac77",
+        "revCount": 353,
         "type": "git",
         "url": "ssh://git@github.com/saronic-technologies/prototype-software-merry"
       },
