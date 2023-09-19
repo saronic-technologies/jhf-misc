@@ -455,11 +455,11 @@
         "srvos": "srvos"
       },
       "locked": {
-        "lastModified": 1695141544,
-        "narHash": "sha256-Xct4FEsUfrzSRpfJwIbibEW9VFO5oXXywi0T4mZlhng=",
+        "lastModified": 1695153509,
+        "narHash": "sha256-xCceMTFkgijbxqdcsret7iKjhYxdnVI4OsXCKWnRd1k=",
         "ref": "refs/heads/main",
-        "rev": "64ea35178831b31713758e0a3136519ecc33ac77",
-        "revCount": 353,
+        "rev": "5271cb0a94dd3ba4972a349e3cec6e24a8e546b4",
+        "revCount": 354,
         "type": "git",
         "url": "ssh://git@github.com/saronic-technologies/prototype-software-merry"
       },
