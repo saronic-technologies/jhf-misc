@@ -197,6 +197,24 @@
     },
     "jetpack-nixos": {
       "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1695338469,
+        "narHash": "sha256-yrsaDmg/aQTXRo2sgbsz65MAI/KJoeMSkNGc02vByOY=",
+        "owner": "anduril",
+        "repo": "jetpack-nixos",
+        "rev": "aa6c8ef864702a12ed2441675a4a8cec98ac758e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anduril",
+        "repo": "jetpack-nixos",
+        "type": "github"
+      }
+    },
+    "jetpack-nixos_2": {
+      "inputs": {
         "nixpkgs": [
           "saronic",
           "nixpkgs"
@@ -315,16 +333,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1694937365,
-        "narHash": "sha256-iHZSGrb9gVpZRR4B2ishUN/1LRKWtSHZNO37C8z1SmA=",
-        "owner": "NixOS",
+        "lastModified": 1673957332,
+        "narHash": "sha256-njH7Szk1BLVWGMw7IRibgGejSlxXHj9saZHfH20gHdk=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5d017a8822e0907fb96f7700a319f9fe2434de02",
+        "rev": "b83e7f5a04a3acc8e92228b0c4bae68933d504eb",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-23.05",
+        "owner": "nixos",
+        "ref": "nixos-22.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -363,11 +381,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1693565476,
-        "narHash": "sha256-ya00zHt7YbPo3ve/wNZ/6nts61xt7wK/APa6aZAfey0=",
+        "lastModified": 1694959747,
+        "narHash": "sha256-CXQ2MuledDVlVM5dLC4pB41cFlBWxRw4tCBsFrq3cRk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "aa8aa7e2ea35ce655297e8322dc82bf77a31d04b",
+        "rev": "970a59bd19eff3752ce552935687100c46e820a5",
         "type": "github"
       },
       "original": {
@@ -408,7 +426,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
+        "jetpack-nixos": "jetpack-nixos",
         "saronic": "saronic"
       }
     },
@@ -443,7 +461,7 @@
         "disko": "disko",
         "flake-utils": "flake-utils_2",
         "imx-nixos": "imx-nixos",
-        "jetpack-nixos": "jetpack-nixos",
+        "jetpack-nixos": "jetpack-nixos_2",
         "libvn": "libvn",
         "nixGL": "nixGL",
         "nixos-generators": "nixos-generators",
@@ -455,17 +473,14 @@
         "srvos": "srvos"
       },
       "locked": {
-        "lastModified": 1695153509,
-        "narHash": "sha256-xCceMTFkgijbxqdcsret7iKjhYxdnVI4OsXCKWnRd1k=",
-        "ref": "refs/heads/main",
-        "rev": "5271cb0a94dd3ba4972a349e3cec6e24a8e546b4",
-        "revCount": 354,
+        "lastModified": 1695396157,
+        "narHash": "sha256-+4vhk9P74mhpK5+kxAVCZKmfTyoBq4fsVl4ym2aRJbw=",
         "type": "git",
-        "url": "ssh://git@github.com/saronic-technologies/prototype-software-merry"
+        "url": "file:///home/freeman/sources/prototype-software-merry"
       },
       "original": {
         "type": "git",
-        "url": "ssh://git@github.com/saronic-technologies/prototype-software-merry"
+        "url": "file:///home/freeman/sources/prototype-software-merry"
       }
     },
     "sopsnix": {

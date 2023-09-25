@@ -1,18 +1,18 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     flake-utils.url = "github:numtide/flake-utils";
-    saronic.url = "git+ssh://git@github.com/saronic-technologies/prototype-software-merry";
+    #saronic.url = "git+ssh://git@github.com/saronic-technologies/prototype-software-merry";
+    saronic.url = "/home/freeman/sources/prototype-software-merry";
     jetpack-nixos.url = "github:anduril/jetpack-nixos";
   };
-  outputs = { nixpkgs, saronic, flake-utils, jetpack-nixos, ... }: flake-utils.lib.eachDefaultSystem (system:
+  outputs = { saronic, flake-utils, jetpack-nixos, ... }: flake-utils.lib.eachDefaultSystem (system:
     let
-      pkgs = import nixpkgs {
+      pkgs = import saronic.inputs.nixpkgs {
         inherit system;
       };
       zed = saronic.packages.${system}.zed-sdk;
-      l4t-cuda = jetpack-nixos.legacyPackages.${system}.l4t-cuda;
-      cuda = jetpack-nixos.legacyPackages.${system}.cudaPackages.cudatoolkit;
+      l4t-cuda = if system == "aarch64-linux" then jetpack-nixos.legacyPackages.${system}.l4t-cuda else null;
+      cuda = if system == "aarch64-linux" then jetpack-nixos.legacyPackages.${system}.cudaPackages.cudatoolkit else pkgs.cudaPackages.cudatoolkit;
     in
     rec {
       devShell = saronic.devShells.${system}.no-step;
