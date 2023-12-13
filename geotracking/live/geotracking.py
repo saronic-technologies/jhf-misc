@@ -23,7 +23,6 @@
     and displays it in a OpenGL window.
 """
 
-from display.generic_display import GenericDisplay
 import pyzed.sl as sl
 from gnss_reader.gpsd_reader import GPSDReader
 
@@ -75,12 +74,9 @@ def main():
     }
     fusion.enable_positionnal_tracking({"gnss_calibration_parameters" : gnss_calibration_parameters , "enable_GNSS_fusion" : True})
     py_translation = sl.Translation()
-    # Setup viewer:
-    viewer = GenericDisplay()
-    viewer.init(zed.get_camera_information().camera_model)
     print("Start grabbing data ...")
     
-    while True:#viewer.isAvailable():
+    while True:
         # Grab camera:
         if zed.grab() == sl.ERROR_CODE.SUCCESS:
             zed_pose = sl.Pose()
@@ -104,14 +100,12 @@ def main():
             translation = fused_position.get_translation(py_translation)
             text_rotation = str((round(rotation[0], 2), round(rotation[1], 2), round(rotation[2], 2)))
             text_translation = str((round(translation.get()[0], 2), round(translation.get()[1], 2), round(translation.get()[2], 2)))
-            viewer.updatePoseData(fused_position.pose_data(),text_translation,text_rotation, current_state) 
             # Get position into the GNSS coordinate system - this needs a initialization between CAMERA 
             # and GNSS. When the initialization is finish the getGeoPose will return sl.POSITIONAL_TRACKING_STATE.OK
             current_geopose = sl.GeoPose()
             current_geopose_satus = fusion.get_geo_pose(current_geopose)
             if current_geopose_satus == sl.GNSS_CALIBRATION_STATE.CALIBRATED:
                 print(current_geopose)
-                viewer.updateGeoPoseData(current_geopose, zed.get_timestamp(sl.TIME_REFERENCE.CURRENT).data_ns/1000)
             """
             else:
                 GNSS coordinate system to ZED coordinate system is not initialize yet

@@ -1,8 +1,7 @@
 {
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    #saronic.url = "git+ssh://git@github.com/saronic-technologies/prototype-software-merry";
-    saronic.url = "/home/freeman/sources/prototype-software-merry";
+    saronic.url = "git+ssh://git@github.com/saronic-technologies/prototype-software-merry";
     jetpack-nixos.url = "github:anduril/jetpack-nixos";
   };
   outputs = { saronic, flake-utils, jetpack-nixos, ... }: flake-utils.lib.eachDefaultSystem (system:
@@ -15,7 +14,9 @@
       cuda = if system == "aarch64-linux" then jetpack-nixos.legacyPackages.${system}.cudaPackages.cudatoolkit else pkgs.cudaPackages.cudatoolkit;
     in
     rec {
-      devShell = saronic.devShells.${system}.no-step;
+      devShell = saronic.devShells.${system}.zeddy-rays.overrideAttrs (n: p: {
+        buildInputs = p.buildInputs ++ [ zed ];
+      });
       packages = rec {
         zepples = pkgs.stdenv.mkDerivation {
           name = "zepples";

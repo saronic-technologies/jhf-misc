@@ -473,14 +473,17 @@
         "srvos": "srvos"
       },
       "locked": {
-        "lastModified": 1695396157,
-        "narHash": "sha256-+4vhk9P74mhpK5+kxAVCZKmfTyoBq4fsVl4ym2aRJbw=",
+        "lastModified": 1695760630,
+        "narHash": "sha256-vjuWg+TdMMv7lAnDAlDTQc3PRB+ppl8hWWDnA2ExXWo=",
+        "ref": "refs/heads/main",
+        "rev": "f5f14b64bd33b03a3fb8d0f5efadfb7793fba695",
+        "revCount": 370,
         "type": "git",
-        "url": "file:///home/freeman/sources/prototype-software-merry"
+        "url": "ssh://git@github.com/saronic-technologies/prototype-software-merry"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/freeman/sources/prototype-software-merry"
+        "url": "ssh://git@github.com/saronic-technologies/prototype-software-merry"
       }
     },
     "sopsnix": {
